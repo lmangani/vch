@@ -2,7 +2,6 @@ module vch
 
 import os
 import flag
-import time
 import net.http
 import v.vmod
 
@@ -59,10 +58,4 @@ fn (d Client) exec(query string) string {
 	}
 	eprintln('$resp.text')
 	return ''
-}
-
-fn now(diff int) string {
-	ts := time.utc()
-	subts := ts.unix_time_milli() - (diff * 1000)
-	return '${subts}000000'
 }
