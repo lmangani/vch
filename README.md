@@ -10,7 +10,7 @@ HTTP ClickHouse driver for V
 ```v
 module main
 
-import  vch
+import vch
 
 fn main(){
     client := vch.new_client('http://clickhouse:8123', 'default:password')
