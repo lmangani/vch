@@ -8,7 +8,7 @@ HTTP ClickHouse driver for V
 
 #### Status
 - Functional _(exec, ping)_
-- Experimental, Untested. Do not use this in production
+- Experimental, Basic & Untested. Do _not_ use this in production
 
 ## Library Usage
 ```v
