@@ -14,7 +14,6 @@ fn fetch_logs(api string, query string, ch_auth string, limit int, format string
 		q = q + ' FORMAT ' + format
 	}
 	url = url + '/?query=$q'
-	println(url)
 	if utf8_str_len(ch_auth) > 8 {
 		auth := ch_auth.split(':')
 		tmp := url.split('://')
@@ -22,19 +21,6 @@ fn fetch_logs(api string, query string, ch_auth string, limit int, format string
 			url = url + '&password=' + auth[1]
 		}
 	}
-
-	/*
-	config := http.FetchConfig{
-		user_agent: 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0'
-	}
-
-	eprintln('trying $url')
-	resp := http.fetch(http.FetchConfig{ ...config, url: url }) or {
-		println('failed to fetch data from the server')
-		return
-	}
-	eprintln('$resp')
-	*/
 
 	gresp := http.get(url) or {
 		println('failed to fetch data from the server')
