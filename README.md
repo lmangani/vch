@@ -6,6 +6,10 @@
 
 HTTP ClickHouse driver for V
 
+#### Status
+- Functional _(exec, ping)_
+- Experimental, Untested. Do not use this in production
+
 ## Library Usage
 ```v
 module main
