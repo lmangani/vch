@@ -6,7 +6,7 @@ import time
 import net.http
 import v.vmod
 
-fn fetch_logs(api string, query string, ch_auth string, limit int, format string) {
+fn exec(api string, query string, ch_auth string, limit int, format string) {
 	mut url := '$api'
 	mut q := '$query'
 
@@ -34,12 +34,6 @@ fn set_value(s string) ?string {
 		return s
 	}
 	return none
-}
-
-fn now(diff int) string {
-	ts := time.utc()
-	subts := ts.unix_time_milli() - (diff * 1000)
-	return '${subts}000000'
 }
 
 fn main() {
@@ -74,7 +68,7 @@ fn main() {
 	// EXECUTE QUERY
 
 	if utf8_str_len(ch_query) > 0 {
-		fetch_logs(ch_api, ch_query, ch_auth, ch_limit, ch_format)
+		exec(ch_api, ch_query, ch_auth, ch_limit, ch_format)
 		return
 	} else {
 		println(fp.usage())
