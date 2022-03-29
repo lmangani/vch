@@ -1,8 +1,7 @@
-module main
+module vch
 
 import os
 import flag
-//import term
 import time
 import net.http
 import v.vmod
