@@ -32,8 +32,7 @@ fn (d Client) ping() string {
 		println('failed to fetch data from the server')
 		return ''
 	}
-	eprintln('$resp.text')
-	return ''
+	return resp.text
 }
 
 fn (d Client) exec(query string) string {
@@ -56,6 +55,5 @@ fn (d Client) exec(query string) string {
 		println('failed to fetch data from the server')
 		return ''
 	}
-	eprintln('$resp.text')
-	return ''
+	return resp.text
 }
