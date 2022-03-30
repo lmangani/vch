@@ -29,3 +29,13 @@ fn main(){
 ```bash
 CH_API="http://clickhouse:8123" CH_AUTH="default:password" vch -q "SHOW DATABASES" -f JSONEachRow
 ```
+
+
+### Todo
+- [x] HTTP/S connectivity
+- [x] Basic Authentication
+- [x] GET/READ support
+- [ ] POST/INSERT support
+- [ ] Format Parsers
+- [ ] Commands
+- [ ] Everything else
