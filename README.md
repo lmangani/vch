@@ -8,6 +8,7 @@ HTTP ClickHouse driver for V
 
 #### Status
 - Functional _(exec, ping)_
+- Read Only mode _(GET)_
 - Experimental, Basic & Untested. Do _not_ use this in production
 
 ## Library Usage
