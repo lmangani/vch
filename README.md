@@ -18,7 +18,8 @@ import vch
 
 fn main(){
     client := vch.new_client('http://clickhouse:8123', 'default:password')
-    client.exec('SELECT 1')
+    rows := client.exec('SELECT 1')
+    println(rows)
 }
 
 ```
